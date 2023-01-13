@@ -27,8 +27,8 @@ export default function ActionUsers(){
 
     // Function to bring single user details (when it is "edit-user" page)
     const getUserDetails = async () => {
-        // eslint-disable-next-line
-        let userData = await fetch(url+id).then(dat=>dat.json()).then(res=>setFormData(res));
+        
+        await fetch(url+id).then(dat=>dat.json()).then(res=>setFormData(res));
     }
 
     // Using useEffect to execute "getUserDetails" function whenever state changes
@@ -46,8 +46,8 @@ export default function ActionUsers(){
     // "handleSubmit" function is for submitting the data to the mock-API and will navigate to users page
     const handleSubmit = async () => {
         if(id){
-            // eslint-disable-next-line
-            let putData = await fetch(url+id,{
+            
+            await fetch(url+id,{
                 method:"PUT",
                 headers:{
                     "Content-Type":"application/json"
@@ -55,8 +55,8 @@ export default function ActionUsers(){
                 body:JSON.stringify(formData)
             }).then(dat=>navigate('/users'));
         }else{
-            // eslint-disable-next-line
-            let postData = await fetch(url,{
+            
+             await fetch(url,{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
