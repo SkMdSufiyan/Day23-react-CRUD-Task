@@ -13,20 +13,20 @@ export default function Users(){
 
     // "getAllUserDetails" function is for fetcing the data of all users
     const getAllUserDetails = async ()=>{
-        // eslint-disable-next-line
-        let allUsersData = await fetch(url).then(dat=>dat.json()).then(res=>{setUsersData(res)});
+        
+        await fetch(url).then(dat=>dat.json()).then(res=>{setUsersData(res)});
     }
 
     // Using "useEffect" to execute the "getAllUserDetails" function whenever the state changes
     useEffect(()=>{
         getAllUserDetails();
-    },[])
+    })
 
 
     // "handleDelete" function is for deleting single user at atime
     const handleDelete = async (id) => {
-        // eslint-disable-next-line
-        let deleteUserData = await fetch(url+id,{
+        
+         await fetch(url+id,{
             method:"DELETE"
         }).then(dat=>{
             getAllUserDetails();
