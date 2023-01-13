@@ -27,8 +27,8 @@ export default function Profile(){
 
     // Function to fetch the details of that particular user
     const getUserDetails = async () => {
-        // eslint-disable-next-line
-        let getData = await fetch(url+id).then(dat=>dat.json()).then(res=>setFormData(res));
+        
+         await fetch(url+id).then(dat=>dat.json()).then(res=>setFormData(res));
     }
 
     // Handling the state changes
