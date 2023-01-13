@@ -27,14 +27,15 @@ export default function EditProfile(){
 
     // Function to fetch the details of that particular user
     const getUserDetails = async () => {
-        
-        await fetch(url+id).then(dat=>dat.json()).then(res=>setFormData(res));
+        // eslint-disable-next-line
+        let userData = await fetch(url+id).then(dat=>dat.json()).then(res=>setFormData(res));
     }
 
     // Handling the state changes
     useEffect(()=>{
         getUserDetails();
-    })
+        // eslint-disable-next-line
+    },[])
 
     // "handleChange" function is to apply the changes made in the form fiels to the "formData"
     const handleChange = (e) => {
@@ -43,8 +44,8 @@ export default function EditProfile(){
 
     // "handleUpdate" function is for updating the data to the mock-API and will navigate to profile page
     const handleUpdate = async () => {
-        
-         await fetch(url+id, {
+        // eslint-disable-next-line
+        let updateData = await fetch(url+id, {
             method:"PUT",
             headers:{
                 "Content-Type":"application/json"
