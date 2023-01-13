@@ -27,8 +27,8 @@ export default function EditProfile(){
 
     // Function to fetch the details of that particular user
     const getUserDetails = async () => {
-        // eslint-disable-next-line
-        let userData = await fetch(url+id).then(dat=>dat.json()).then(res=>setFormData(res));
+        
+        await fetch(url+id).then(dat=>dat.json()).then(res=>setFormData(res));
     }
 
     // Handling the state changes
@@ -43,8 +43,8 @@ export default function EditProfile(){
 
     // "handleUpdate" function is for updating the data to the mock-API and will navigate to profile page
     const handleUpdate = async () => {
-        // eslint-disable-next-line
-        let updateData = await fetch(url+id, {
+        
+         await fetch(url+id, {
             method:"PUT",
             headers:{
                 "Content-Type":"application/json"
