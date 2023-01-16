@@ -1,7 +1,8 @@
 # Day23-react-CRUD-Task
-The CRUD operations using react. 
+Kindly check "App.js", "Dashboard.js", "Users.js", "ActionUsers.js", "Profile.js", "EditProfile.js" files to verify the code.  
+The CRUD operations using React.  
 The "App.js" is the main file and handles all the routings. 
-The "Dashboard.js" file handles the dashboad. 
+The "Dashboard.js" file handles the dashboard.  
 The "Users.js" file handles listing the users. 
 The "ActionUsers.js" file handles both create-user and edit-user. 
 The "Profile.js" file handles profile page to view the complete profile of user. 
