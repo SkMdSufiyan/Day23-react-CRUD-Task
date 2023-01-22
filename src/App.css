@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+/* Styling for suggestion at the top */
+.netlify-suggestion-p{
+  font-size: small;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
